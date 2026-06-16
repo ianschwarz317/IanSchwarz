@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ian Schwarz — Builder at the intersection of hospitality & technology</title>
-  <meta name="description" content="Hospitality executive building AI-powered products across travel, payments, veterinary care, and utilities.">
+  <title>Ian Schwarz — Builder of AI-powered products</title>
+  <meta name="description" content="Founder building AI-powered products across pet health, hospitality, payments, and productivity — including Honeybee, DirectGuest, BlackoutPDF, SureHold, and Raiz'd.">
   <meta name="author" content="Ian Schwarz">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a1628">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230a1628'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23ffffff' text-anchor='middle'>I</text></svg>">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ianschwarz.com/">
-  <meta property="og:title" content="Ian Schwarz — Builder at the intersection of hospitality & technology">
-  <meta property="og:image" content="https://ianschwarz.com/og-image.jpg">
-  <meta property="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Ian Schwarz — Builder of AI-powered products">
+  <meta property="og:description" content="Founder building AI-powered products across pet health, hospitality, payments, and productivity.">
+  <meta property="og:image" content="https://ianschwarz.com/ian-schwarz.jpg">
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:title" content="Ian Schwarz — Builder of AI-powered products">
+  <meta property="twitter:description" content="Founder building AI-powered products across pet health, hospitality, payments, and productivity.">
+  <meta property="twitter:image" content="https://ianschwarz.com/ian-schwarz.jpg">
   <link rel="canonical" href="https://ianschwarz.com/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -249,6 +255,19 @@
     .product-card:hover::before { opacity: 1; }
     .product-card--featured { padding: 34px 30px 28px; }
 
+    /* Hero (focus) product card — full width, horizontal */
+    .grid-hero { display: grid; grid-template-columns: 1fr; margin-bottom: 22px; }
+    .product-card--hero {
+      flex-direction: row; align-items: flex-start; gap: 28px;
+      padding: 38px 36px;
+    }
+    .product-card--hero .product-icon-box {
+      width: 64px; height: 64px; font-size: 32px; margin-bottom: 0;
+    }
+    .product-card--hero .hero-card-body { flex: 1; display: flex; flex-direction: column; }
+    .product-card--hero .product-name { font-size: 26px; }
+    .product-card--hero .product-desc { font-size: 15px; max-width: 760px; line-height: 1.75; }
+
     /* Arrow circle */
     .card-arrow {
       position: absolute; top: 22px; right: 22px;
@@ -350,7 +369,7 @@
       background: var(--bg-2);
     }
     .footer-name { font-family: 'Playfair Display', Georgia, serif; font-size: 14px; font-weight: 600; color: var(--text-3); }
-    .footer-note { font-size: 12px; color: var(--text-4); }
+    .footer-note { font-size: 12px; color: var(--text-3); }
 
     /* ─── ANIMATIONS ─── */
     @keyframes fadeUp {
@@ -373,6 +392,8 @@
       .stat-row { grid-template-columns: 1fr; }
       section { padding: 64px 24px; }
       .grid-featured, .grid-wallets, .grid-tail { grid-template-columns: 1fr; gap: 14px; }
+      .product-card--hero { flex-direction: column; gap: 16px; padding: 28px 24px; }
+      .product-card--hero .product-icon-box { margin-bottom: 0; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .about-photo { max-width: 140px; border-radius: 50%; aspect-ratio: 1; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 12px; }
@@ -392,6 +413,7 @@
   </ul>
 </nav>
 
+<main>
 <!-- HERO -->
 <section style="padding: 0;">
   <div class="hero">
@@ -402,18 +424,18 @@
         <div class="hero-badge">Builder · Operator · Founder</div>
         <h1>Where hospitality meets <em>intelligent</em> technology</h1>
         <p class="hero-bio">
-          Hospitality executive with deep expertise in the guest journey, combining operational leadership with a strong technical skillset. Building systems at the intersection of travel, payments, and utilities — focused on reducing friction and improving how businesses and customers interact with core services.
+          Hospitality executive with deep expertise in the guest journey, combining operational leadership with a strong technical skillset. Building AI-powered products across pet health, hospitality, payments, and productivity — focused on reducing the friction between intent and outcome.
         </p>
         <div class="hero-actions">
           <a href="#products" class="btn-primary">View my work</a>
-          <a href="https://www.linkedin.com/in/direct-hotel-bookings/" target="_blank" class="btn-ghost">LinkedIn ↗</a>
+          <a href="https://www.linkedin.com/in/direct-hotel-bookings/" target="_blank" rel="noopener noreferrer" class="btn-ghost">LinkedIn ↗</a>
         </div>
       </div>
 
       <div class="hero-stats">
         <div class="stat-card">
-          <div class="stat-number">4</div>
-          <div class="stat-label">Products in market across hospitality, travel, payments & productivity</div>
+          <div class="stat-number">7</div>
+          <div class="stat-label">Products live across pet health, hospitality, payments & productivity</div>
         </div>
         <div class="stat-row">
           <div class="stat-card">
@@ -440,62 +462,87 @@
       </div>
     </div>
 
-    <!-- GROUP 1 — Core -->
+    <!-- FEATURED — Honeybee -->
     <div class="product-group">
       <div class="group-label">
-        <span class="group-label-text">Core Products</span>
+        <span class="group-label-text">Featured</span>
         <span class="group-label-line"></span>
       </div>
-      <div class="grid-featured">
+      <div class="grid-hero">
 
-        <a href="#" class="product-card product-card--featured">
+        <a href="https://seehoneybee.com/" target="_blank" rel="noopener noreferrer" class="product-card product-card--featured product-card--hero">
           <div class="card-arrow">↗</div>
-          <div class="product-icon-box">🏨</div>
-          <span class="product-tag">Hospitality · AI</span>
-          <div class="product-name">DirectGuest</div>
-          <p class="product-desc">Enables direct hotel bookings via conversational AI and social media. Reduces OTA dependency by meeting guests where they already are — eliminating the friction between discovery and reservation.</p>
-          <div class="product-pill">⚡ Conversational booking</div>
+          <div class="product-icon-box" aria-hidden="true">🐝</div>
+          <div class="hero-card-body">
+            <span class="product-tag">Pet Health · AI</span>
+            <div class="product-name">Honeybee</div>
+            <p class="product-desc">Your pet's whole health record, always with you. A free microchip registry and health-records platform that works with any chip brand — with AI document extraction, vaccination tracking, instant alerts when a lost pet's chip is scanned, and profiles you can share with vets, groomers, and boarders.</p>
+            <div class="product-pill">🐾 Live at seehoneybee.com</div>
+          </div>
         </a>
-
-        <a href="#" class="product-card product-card--featured">
-          <div class="card-arrow">↗</div>
-          <div class="product-icon-box">🤖</div>
-          <span class="product-tag">Hospitality · Agentic AI</span>
-          <div class="product-name">Hospitality Agents</div>
-          <p class="product-desc">Autonomous AI agents purpose-built for hospitality operations. From guest services to back-of-house coordination — agents that handle complexity so teams can focus on the experience.</p>
-          <div class="product-pill">🧠 Autonomous operations</div>
-        </a>
-
-
 
       </div>
     </div>
 
-
-
-    <!-- GROUP 3 — Also live -->
+    <!-- MORE PRODUCTS -->
     <div class="product-group">
       <div class="group-label">
-        <span class="group-label-text">Also Live</span>
+        <span class="group-label-text">More Products</span>
         <span class="group-label-line"></span>
       </div>
-      <div class="grid-tail">
+      <div class="grid-wallets">
 
-        <a href="#" class="product-card">
+        <a href="https://directguest.ai/" target="_blank" rel="noopener noreferrer" class="product-card">
           <div class="card-arrow">↗</div>
-          <div class="product-icon-box">🦞</div>
-          <span class="product-tag">Tourism · Agentic AI</span>
-          <div class="product-name">The Maine Scoop</div>
-          <p class="product-desc">Maine's agentic tourism engine. Enables end-to-end travel discovery and booking through agentic channels — a new model for destination-driven commerce powered by autonomous AI.</p>
-          <div class="product-pill">🤖 Agentic travel</div>
+          <div class="product-icon-box" aria-hidden="true">🏨</div>
+          <span class="product-tag">Hospitality · AI</span>
+          <div class="product-name">DirectGuest</div>
+          <p class="product-desc">The first AI-native hotel distribution channel. Routes travelers from AI assistants like Claude and ChatGPT straight to a hotel's own booking site — commission-free, no OTA, no integration changes.</p>
+          <div class="product-pill">↗ directguest.ai</div>
         </a>
 
-        <a href="https://feedanchor.com" target="_blank" class="product-card">
+        <a href="https://blackoutpdf.co/" target="_blank" rel="noopener noreferrer" class="product-card">
           <div class="card-arrow">↗</div>
-          <div class="product-icon-box">🔖</div>
+          <div class="product-icon-box" aria-hidden="true">🛡️</div>
+          <span class="product-tag">Privacy · Web App</span>
+          <div class="product-name">BlackoutPDF</div>
+          <p class="product-desc">Redact anything. Upload nothing. A browser-based PDF tool that burns redactions into pixels and strips metadata — documents never leave your tab, so there's no server to breach.</p>
+          <div class="product-pill">↗ blackoutpdf.co</div>
+        </a>
+
+        <a href="https://surehold.xyz/" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="card-arrow">↗</div>
+          <div class="product-icon-box" aria-hidden="true">🏗️</div>
+          <span class="product-tag">Construction · Payments</span>
+          <div class="product-name">SureHold</div>
+          <p class="product-desc">Lien-waiver payment automation for general contractors. Payment releases the moment the waiver is signed — one-click signing for subs, an audit-ready ledger for GCs, across all 50 states.</p>
+          <div class="product-pill">↗ surehold.xyz</div>
+        </a>
+
+        <a href="https://raizd.xyz/" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="card-arrow">↗</div>
+          <div class="product-icon-box" aria-hidden="true">📈</div>
+          <span class="product-tag">Fundraising · SaaS</span>
+          <div class="product-name">Raiz'd</div>
+          <p class="product-desc">The whole raise in one place — built for the founder DocSend skips. Trackable pitch decks with per-slide analytics, an investor CRM, NDA-gated data rooms, and metrics-driven updates.</p>
+          <div class="product-pill">↗ raizd.xyz</div>
+        </a>
+
+        <a href="https://wallio.co" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="card-arrow">↗</div>
+          <div class="product-icon-box" aria-hidden="true">💳</div>
+          <span class="product-tag">Productivity · Wallet</span>
+          <div class="product-name">Wallio</div>
+          <p class="product-desc">A business card in your wallet. Create a digital card that lives in Apple Wallet and Google Wallet — share by tap or QR and the other person saves you to their contacts instantly. No app required.</p>
+          <div class="product-pill">↗ wallio.co</div>
+        </a>
+
+        <a href="https://feedanchor.com" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="card-arrow">↗</div>
+          <div class="product-icon-box" aria-hidden="true">🔖</div>
           <span class="product-tag">Productivity · Chrome Extension</span>
           <div class="product-name">FeedAnchor</div>
-          <p class="product-desc">Automatically saves LinkedIn posts you pause on, so a feed refresh never costs you content again. Built for professionals who spend meaningful time on LinkedIn and can't afford to lose posts.</p>
+          <p class="product-desc">Automatically saves LinkedIn posts you pause on, so a feed refresh never costs you content again. Built for professionals who can't afford to lose posts they meant to come back to.</p>
           <div class="product-pill">🚀 Live at feedanchor.com</div>
         </a>
 
@@ -518,9 +565,11 @@
     <div class="about-grid">
       <div>
         <img
-          src="1754585797375.jpeg"
-          alt="Ian Schwarz"
+          src="ian-schwarz.jpg"
+          alt="Portrait of Ian Schwarz"
           class="about-photo"
+          width="240" height="320"
+          loading="lazy"
         />
       </div>
 
@@ -560,12 +609,14 @@
       <h2>Interested in working together?</h2>
       <p class="connect-sub">Whether you're building in hospitality, looking to reduce conversion friction, or just want to talk about where AI is taking the travel industry.</p>
       <div class="connect-links">
-        <a href="https://www.linkedin.com/in/direct-hotel-bookings/" target="_blank" class="btn-primary">Connect on LinkedIn</a>
-        <a href="https://feedanchor.com" target="_blank" class="btn-ghost">Try FeedAnchor ↗</a>
+        <a href="https://www.linkedin.com/in/direct-hotel-bookings/" target="_blank" rel="noopener noreferrer" class="btn-primary">Connect on LinkedIn</a>
+        <a href="https://seehoneybee.com/" target="_blank" rel="noopener noreferrer" class="btn-ghost">See Honeybee ↗</a>
       </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -593,7 +644,9 @@
 
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
+      const href = a.getAttribute('href');
+      if (!href || href === '#' || href.length < 2) return;
+      const target = document.querySelector(href);
       if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
@@ -607,7 +660,7 @@
   "url": "https://ianschwarz.com",
   "sameAs": ["https://www.linkedin.com/in/direct-hotel-bookings/"],
   "jobTitle": "Builder · Operator · Founder",
-  "description": "Hospitality executive building AI-powered products across travel, payments, veterinary care, and utilities"
+  "description": "Founder building AI-powered products across pet health, hospitality, payments, and productivity"
 }
 </script>
 </body>
