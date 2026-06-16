@@ -106,15 +106,6 @@
       mask-image: radial-gradient(ellipse 55% 80% at 82% 50%, transparent 15%, black 85%);
       pointer-events: none;
     }
-    .hero-glow {
-      position: absolute;
-      width: 700px; height: 700px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(26,60,255,0.045) 0%, transparent 65%);
-      top: 50%; right: -80px;
-      transform: translateY(-50%);
-      pointer-events: none;
-    }
     .hero-inner {
       position: relative; z-index: 1;
       max-width: 1160px; margin: 0 auto; width: 100%;
@@ -232,94 +223,66 @@
     /* ── Card ── */
     .product-card {
       background: var(--bg);
-      border: 1px solid var(--border-2);
-      border-radius: 10px;
-      padding: 30px 28px 26px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 28px 28px 26px;
       text-decoration: none;
       display: flex; flex-direction: column;
-      position: relative; overflow: hidden;
-      transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+      position: relative;
+      transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
     }
     .product-card:hover {
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-3px);
-      border-color: rgba(0,0,0,0.0);
-    }
-    .product-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--navy), var(--blue));
-      opacity: 0; transition: opacity 0.25s;
-      border-radius: 10px 10px 0 0;
-    }
-    .product-card:hover::before { opacity: 1; }
-    .product-card--featured { padding: 34px 30px 28px; }
-
-    /* Hero (focus) product card — full width, horizontal */
-    .grid-hero { display: grid; grid-template-columns: 1fr; margin-bottom: 22px; }
-    .product-card--hero {
-      flex-direction: row; align-items: flex-start; gap: 28px;
-      padding: 38px 36px;
-    }
-    .product-card--hero .product-icon-box {
-      width: 64px; height: 64px; font-size: 32px; margin-bottom: 0;
-    }
-    .product-card--hero .hero-card-body { flex: 1; display: flex; flex-direction: column; }
-    .product-card--hero .product-name { font-size: 26px; }
-    .product-card--hero .product-desc { font-size: 15px; max-width: 760px; line-height: 1.75; }
-
-    /* Arrow circle */
-    .card-arrow {
-      position: absolute; top: 22px; right: 22px;
-      width: 28px; height: 28px;
-      border: 1px solid var(--border-2); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 11px; color: var(--text-4);
-      transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
-    }
-    .product-card:hover .card-arrow {
-      background: var(--navy); border-color: var(--navy);
-      color: #fff; transform: translate(1px, -1px);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--navy);
     }
 
-    /* Icon box */
-    .product-icon-box {
-      width: 46px; height: 46px;
-      background: var(--bg-3); border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px; margin-bottom: 16px; flex-shrink: 0;
-      transition: background 0.2s;
+    /* Index + category row */
+    .card-top {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px;
     }
-    .product-card--featured .product-icon-box { width: 50px; height: 50px; font-size: 24px; }
-    .product-card:hover .product-icon-box { background: var(--blue-dim2); }
-
+    .product-index {
+      font-family: 'SF Mono', ui-monospace, 'Fira Code', monospace;
+      font-size: 11px; font-weight: 500;
+      color: var(--text-4); letter-spacing: 0.04em;
+    }
+    .card-top-rule { flex: 1; height: 1px; background: var(--border); }
     .product-tag {
-      display: inline-block; padding: 3px 8px;
-      border: 1px solid var(--border-2); border-radius: 3px;
-      font-size: 9px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.10em;
-      color: var(--text-3); margin-bottom: 10px; align-self: flex-start;
+      font-family: 'SF Mono', ui-monospace, 'Fira Code', monospace;
+      font-size: 10px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--text-4);
     }
+
     .product-name {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 19px; font-weight: 600;
-      color: var(--navy); margin-bottom: 9px;
-      letter-spacing: -0.01em; line-height: 1.2;
+      font-size: 21px; font-weight: 600;
+      color: var(--navy); margin-bottom: 10px;
+      letter-spacing: -0.015em; line-height: 1.15;
     }
-    .product-card--featured .product-name { font-size: 21px; }
     .product-desc {
       font-size: 13.5px; color: var(--text-2);
-      line-height: 1.70; font-weight: 300; flex: 1;
+      line-height: 1.72; font-weight: 400; flex: 1;
     }
-    .product-pill {
-      display: inline-flex; align-items: center; gap: 5px;
-      margin-top: 16px; padding: 5px 10px;
-      background: var(--bg-3); border-radius: 3px;
-      font-size: 11px; font-weight: 500; color: var(--text-3);
-      align-self: flex-start;
-      transition: background 0.2s, color 0.2s;
+    .product-link {
+      margin-top: 20px; align-self: flex-start;
+      font-family: 'SF Mono', ui-monospace, 'Fira Code', monospace;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.01em;
+      color: var(--text-3);
+      display: inline-flex; align-items: center; gap: 7px;
+      transition: color 0.2s ease, gap 0.2s ease;
     }
-    .product-card:hover .product-pill { background: var(--blue-dim); color: var(--blue); }
+    .product-link .arrow { transition: transform 0.2s ease; }
+    .product-card:hover .product-link { color: var(--blue); }
+    .product-card:hover .product-link .arrow { transform: translateX(3px); }
+
+    /* Hero (focus) product card — full width */
+    .grid-hero { display: grid; grid-template-columns: 1fr; margin-bottom: 20px; }
+    .product-card--hero { padding: 40px 38px; }
+    .product-card--hero .product-name { font-size: 32px; margin-bottom: 14px; }
+    .product-card--hero .product-desc { font-size: 15.5px; line-height: 1.78; max-width: 720px; }
+    .product-card--hero .product-link { font-size: 12px; margin-top: 24px; }
 
     /* ─── ABOUT ─── */
     .about-section {
@@ -392,8 +355,8 @@
       .stat-row { grid-template-columns: 1fr; }
       section { padding: 64px 24px; }
       .grid-featured, .grid-wallets, .grid-tail { grid-template-columns: 1fr; gap: 14px; }
-      .product-card--hero { flex-direction: column; gap: 16px; padding: 28px 24px; }
-      .product-card--hero .product-icon-box { margin-bottom: 0; }
+      .product-card--hero { padding: 30px 24px; }
+      .product-card--hero .product-name { font-size: 26px; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .about-photo { max-width: 140px; border-radius: 50%; aspect-ratio: 1; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 12px; }
@@ -418,7 +381,6 @@
 <section style="padding: 0;">
   <div class="hero">
     <div class="hero-bg-grid"></div>
-    <div class="hero-glow"></div>
     <div class="hero-inner">
       <div class="hero-content">
         <div class="hero-badge">Builder · Operator · Founder</div>
@@ -470,15 +432,15 @@
       </div>
       <div class="grid-hero">
 
-        <a href="https://seehoneybee.com/" target="_blank" rel="noopener noreferrer" class="product-card product-card--featured product-card--hero">
-          <div class="card-arrow">↗</div>
-          <div class="product-icon-box" aria-hidden="true">🐝</div>
-          <div class="hero-card-body">
+        <a href="https://seehoneybee.com/" target="_blank" rel="noopener noreferrer" class="product-card product-card--hero">
+          <div class="card-top">
+            <span class="product-index">01</span>
             <span class="product-tag">Pet Health · AI</span>
-            <div class="product-name">Honeybee</div>
-            <p class="product-desc">Your pet's whole health record, always with you. A free microchip registry and health-records platform that works with any chip brand — with AI document extraction, vaccination tracking, instant alerts when a lost pet's chip is scanned, and profiles you can share with vets, groomers, and boarders.</p>
-            <div class="product-pill">🐾 Live at seehoneybee.com</div>
+            <span class="card-top-rule"></span>
           </div>
+          <div class="product-name">Honeybee</div>
+          <p class="product-desc">Your pet's whole health record, always with you. A free microchip registry and health-records platform that works with any chip brand — with AI document extraction, vaccination tracking, instant alerts when a lost pet's chip is scanned, and profiles you can share with vets, groomers, and boarders.</p>
+          <span class="product-link">seehoneybee.com <span class="arrow">→</span></span>
         </a>
 
       </div>
@@ -493,57 +455,63 @@
       <div class="grid-wallets">
 
         <a href="https://directguest.ai/" target="_blank" rel="noopener noreferrer" class="product-card">
-          <div class="card-arrow">↗</div>
-          <div class="product-icon-box" aria-hidden="true">🏨</div>
-          <span class="product-tag">Hospitality · AI</span>
+          <div class="card-top">
+            <span class="product-index">02</span>
+            <span class="product-tag">Hospitality · AI</span>
+          </div>
           <div class="product-name">DirectGuest</div>
           <p class="product-desc">The first AI-native hotel distribution channel. Routes travelers from AI assistants like Claude and ChatGPT straight to a hotel's own booking site — commission-free, no OTA, no integration changes.</p>
-          <div class="product-pill">↗ directguest.ai</div>
+          <span class="product-link">directguest.ai <span class="arrow">→</span></span>
         </a>
 
         <a href="https://blackoutpdf.co/" target="_blank" rel="noopener noreferrer" class="product-card">
-          <div class="card-arrow">↗</div>
-          <div class="product-icon-box" aria-hidden="true">🛡️</div>
-          <span class="product-tag">Privacy · Web App</span>
+          <div class="card-top">
+            <span class="product-index">03</span>
+            <span class="product-tag">Privacy · Web App</span>
+          </div>
           <div class="product-name">BlackoutPDF</div>
           <p class="product-desc">Redact anything. Upload nothing. A browser-based PDF tool that burns redactions into pixels and strips metadata — documents never leave your tab, so there's no server to breach.</p>
-          <div class="product-pill">↗ blackoutpdf.co</div>
+          <span class="product-link">blackoutpdf.co <span class="arrow">→</span></span>
         </a>
 
         <a href="https://surehold.xyz/" target="_blank" rel="noopener noreferrer" class="product-card">
-          <div class="card-arrow">↗</div>
-          <div class="product-icon-box" aria-hidden="true">🏗️</div>
-          <span class="product-tag">Construction · Payments</span>
+          <div class="card-top">
+            <span class="product-index">04</span>
+            <span class="product-tag">Construction · Payments</span>
+          </div>
           <div class="product-name">SureHold</div>
           <p class="product-desc">Lien-waiver payment automation for general contractors. Payment releases the moment the waiver is signed — one-click signing for subs, an audit-ready ledger for GCs, across all 50 states.</p>
-          <div class="product-pill">↗ surehold.xyz</div>
+          <span class="product-link">surehold.xyz <span class="arrow">→</span></span>
         </a>
 
         <a href="https://raizd.xyz/" target="_blank" rel="noopener noreferrer" class="product-card">
-          <div class="card-arrow">↗</div>
-          <div class="product-icon-box" aria-hidden="true">📈</div>
-          <span class="product-tag">Fundraising · SaaS</span>
+          <div class="card-top">
+            <span class="product-index">05</span>
+            <span class="product-tag">Fundraising · SaaS</span>
+          </div>
           <div class="product-name">Raiz'd</div>
           <p class="product-desc">The whole raise in one place — built for the founder DocSend skips. Trackable pitch decks with per-slide analytics, an investor CRM, NDA-gated data rooms, and metrics-driven updates.</p>
-          <div class="product-pill">↗ raizd.xyz</div>
+          <span class="product-link">raizd.xyz <span class="arrow">→</span></span>
         </a>
 
         <a href="https://wallio.co" target="_blank" rel="noopener noreferrer" class="product-card">
-          <div class="card-arrow">↗</div>
-          <div class="product-icon-box" aria-hidden="true">💳</div>
-          <span class="product-tag">Productivity · Wallet</span>
+          <div class="card-top">
+            <span class="product-index">06</span>
+            <span class="product-tag">Productivity · Wallet</span>
+          </div>
           <div class="product-name">Wallio</div>
           <p class="product-desc">A business card in your wallet. Create a digital card that lives in Apple Wallet and Google Wallet — share by tap or QR and the other person saves you to their contacts instantly. No app required.</p>
-          <div class="product-pill">↗ wallio.co</div>
+          <span class="product-link">wallio.co <span class="arrow">→</span></span>
         </a>
 
         <a href="https://feedanchor.com" target="_blank" rel="noopener noreferrer" class="product-card">
-          <div class="card-arrow">↗</div>
-          <div class="product-icon-box" aria-hidden="true">🔖</div>
-          <span class="product-tag">Productivity · Chrome Extension</span>
+          <div class="card-top">
+            <span class="product-index">07</span>
+            <span class="product-tag">Productivity · Chrome Extension</span>
+          </div>
           <div class="product-name">FeedAnchor</div>
           <p class="product-desc">Automatically saves LinkedIn posts you pause on, so a feed refresh never costs you content again. Built for professionals who can't afford to lose posts they meant to come back to.</p>
-          <div class="product-pill">🚀 Live at feedanchor.com</div>
+          <span class="product-link">feedanchor.com <span class="arrow">→</span></span>
         </a>
 
       </div>
