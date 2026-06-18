@@ -1,0 +1,120 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Ian Schwarz",
+    "label": "Customer Success & Operations Executive (B2B SaaS) · Builder",
+    "image": "https://ianschwarz.com/ian-schwarz.jpg",
+    "email": "ian_schwarz@outlook.com",
+    "url": "https://ianschwarz.com",
+    "summary": "Customer Success & Operations executive turned full-stack builder. Led a 40-person CS organization over a $65M+ ARR enterprise portfolio and drove a 4%→18% EBITDA turnaround; separately solo-designed, built, and launched seven live AI-powered products. Pairs executive operating experience (org leadership, retention/expansion, P&L-adjacent outcomes) with hands-on engineering — rare for either a leadership or a 0→1 founder seat.",
+    "location": {
+      "city": "Park City",
+      "region": "UT",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ianschwarz",
+        "url": "https://www.linkedin.com/in/ianschwarz/"
+      },
+      {
+        "network": "GitHub",
+        "username": "ianschwarz317",
+        "url": "https://github.com/ianschwarz317"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "One Journey",
+      "position": "Director of Customer Success (Contract, Embedded)",
+      "summary": "Embedded CS leadership on a contract basis, owning customer outcomes, retention, and operational process.",
+      "highlights": []
+    },
+    {
+      "name": "Cendyn",
+      "position": "Vice President, Customer Success",
+      "startDate": "2023-06",
+      "endDate": "2024-11",
+      "summary": "Led the Customer Success organization for a B2B SaaS company serving enterprise hospitality clients.",
+      "highlights": [
+        "Led a 40-person Customer Success organization across an enterprise portfolio of $65M+ ARR.",
+        "Drove an EBITDA turnaround on the portfolio from 4% to 18%.",
+        "Re-tied Customer Success to renewals and net revenue retention, making renewals and expansion predictable.",
+        "Earned President's Club recognition.",
+        "As a Senior Director earlier, reversed $2.5M in customer churn."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Honeybee",
+      "description": "Free pet microchip registry & health-records platform with AI document extraction, vaccination tracking, and lost-pet chip-scan alerts.",
+      "url": "https://seehoneybee.com/",
+      "keywords": ["pet health", "AI", "B2C", "SaaS"],
+      "roles": ["Founder", "Full-stack engineer"]
+    },
+    {
+      "name": "DirectGuest",
+      "description": "The first AI-native hotel distribution channel — routes travelers from AI assistants like Claude and ChatGPT directly to a hotel's own booking site, commission-free.",
+      "url": "https://directguest.ai/",
+      "keywords": ["hospitality", "AI", "distribution", "MCP"],
+      "roles": ["Founder", "Full-stack engineer"]
+    },
+    {
+      "name": "BlackoutPDF",
+      "description": "In-browser PDF redaction that burns redactions into pixels and strips metadata — documents never leave the user's tab.",
+      "url": "https://blackoutpdf.co/",
+      "keywords": ["privacy", "web app", "security"],
+      "roles": ["Founder", "Full-stack engineer"]
+    },
+    {
+      "name": "SureHold",
+      "description": "Lien-waiver payment automation for general contractors — payment releases the moment the waiver is signed, across all 50 states.",
+      "url": "https://surehold.xyz/",
+      "keywords": ["construction", "payments", "fintech"],
+      "roles": ["Founder", "Full-stack engineer"]
+    },
+    {
+      "name": "Raiz'd",
+      "description": "Fundraising operations platform — trackable pitch decks with per-slide analytics, investor CRM, and NDA-gated data rooms.",
+      "url": "https://raizd.xyz/",
+      "keywords": ["fundraising", "SaaS", "analytics"],
+      "roles": ["Founder", "Full-stack engineer"]
+    },
+    {
+      "name": "Wallio",
+      "description": "Digital business cards that live in Apple Wallet and Google Wallet — share by tap or QR, no app required.",
+      "url": "https://wallio.co",
+      "keywords": ["productivity", "wallet", "mobile"],
+      "roles": ["Founder", "Full-stack engineer"]
+    },
+    {
+      "name": "FeedAnchor",
+      "description": "Chrome extension that automatically saves LinkedIn posts you pause on, so a feed refresh never costs you content.",
+      "url": "https://feedanchor.com",
+      "keywords": ["productivity", "chrome extension"],
+      "roles": ["Founder", "Full-stack engineer"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Customer Success Leadership",
+      "keywords": ["Net Revenue Retention", "Renewals & Expansion", "Churn Reduction", "CS Org Design", "Health Scoring", "Enterprise Account Management", "QBRs"]
+    },
+    {
+      "name": "Revenue & Business Operations",
+      "keywords": ["RevOps", "GTM Strategy", "Segmentation", "Forecasting", "P&L / EBITDA", "Process Design"]
+    },
+    {
+      "name": "Product & Engineering",
+      "keywords": ["Full-stack development", "Next.js", "React Native", "Supabase", "Applied AI / LLMs", "Agentic systems", "0→1 product"]
+    }
+  ],
+  "meta": {
+    "canonical": "https://ianschwarz.com/resume.json",
+    "version": "1.0.0",
+    "note": "Earlier roles, exact tenure dates for the current contract, and education are available on request / LinkedIn."
+  }
+}

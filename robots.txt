@@ -1,7 +1,53 @@
 # robots.txt for ianschwarz.com
 
+# Default: welcome all crawlers.
 User-agent: *
 Allow: /
+
+# AI crawlers & answer engines explicitly welcomed.
+# (Allowing these lets assistants like ChatGPT, Claude, Perplexity, and Gemini
+#  read and surface this site. See /llms.txt for a distilled, LLM-friendly summary.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# LLM-friendly summary of this site:
+# https://ianschwarz.com/llms.txt
 
 # Sitemaps
 Sitemap: https://ianschwarz.com/sitemap.xml
