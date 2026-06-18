@@ -36,6 +36,7 @@ AI-native and vertical B2B SaaS are especially interesting.
 
 ## Links
 - Website: https://ianschwarz.com
+- Résumé (PDF): https://ianschwarz.com/Ian-Schwarz-Resume.pdf
 - Résumé (machine-readable, JSON Resume schema): https://ianschwarz.com/resume.json
 - LinkedIn: https://www.linkedin.com/in/ianschwarz/
 - GitHub: https://github.com/ianschwarz317

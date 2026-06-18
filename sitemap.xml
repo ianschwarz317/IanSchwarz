@@ -3,12 +3,18 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ianschwarz.com/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://ianschwarz.com/ian-schwarz.jpg</image:loc>
       <image:title>Ian Schwarz — builder of AI-powered products</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://ianschwarz.com/Ian-Schwarz-Resume.pdf</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
